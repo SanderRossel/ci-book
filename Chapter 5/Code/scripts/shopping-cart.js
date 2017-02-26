@@ -5,7 +5,7 @@ angular.module('shopApp', [])
             this.number = options.number
         };
         Line.prototype.subTotal = function () {
-            return (this.product.price * this.number).toFixed(2);
+            return +(this.product.price * this.number).toFixed(2);
         }
         
         $scope.lines = [new Line({
@@ -19,9 +19,9 @@ angular.module('shopApp', [])
         $scope.total = function () {
             var sum = 0;
             $scope.lines.forEach(function (l) {
-                sum += +l.subTotal();
+                sum += l.subTotal();
             });
-            return sum.toFixed(2);
+            return +sum.toFixed(2);
         };
         
         $scope.removeLine = function (line) {

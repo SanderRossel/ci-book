@@ -38,13 +38,17 @@ var repository = (function () {
             return [products[1], products[2], products[3]];
         },
         getProduct: function (id) {
-            return products.filter(p => p.id === id)[0];
+            return products.filter(function (p) {
+                return p.id === id;
+            })[0];
         },
         search: function (q) {
             if (q == null) {
                 return [];
             } else {
-                return products.filter(p => p.name.toLowerCase().indexOf(q.toLowerCase()) >= 0);
+                return products.filter(function (p) {
+                    return p.name.toLowerCase().indexOf(q.toLowerCase()) >= 0;
+                });
             }
         }
     };
