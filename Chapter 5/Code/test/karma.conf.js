@@ -59,4 +59,4 @@ module.exports = function(config) {
         useBrowserName: true
     }
   })
-}
+};
