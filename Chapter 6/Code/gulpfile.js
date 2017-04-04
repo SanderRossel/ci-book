@@ -103,7 +103,7 @@ gulp.task('clean', function () {
         return done();
     }).start();
 })
-.task('test-min', ['build'], function (done) {
+.task('test-min', ['test'], function (done) {
     new karma({
         configFile: __dirname + '/test/karma.min.conf.js'
     }, function (err) {
@@ -114,7 +114,7 @@ gulp.task('clean', function () {
     }).start();
 })
 .task('build', ['js', 'css', 'html'])
-.task('default', ['lint', 'test', 'test-min']);
+.task('default', ['lint', 'test-min']);
 
 gulp.watch(['css/*.css', 'views/*.html', 'index.html'], ['build']);
 gulp.watch('scripts/*.js', ['default']);
