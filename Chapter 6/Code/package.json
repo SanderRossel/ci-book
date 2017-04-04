@@ -38,6 +38,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-size": "^2.1.0",
     "gulp-util": "^3.0.8",
+    "istanbul": "^0.4.5",
     "jasmine": "^2.5.3",
     "jasmine-reporters": "^2.2.0",
     "jshint": "^2.9.4",

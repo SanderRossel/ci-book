@@ -10,12 +10,20 @@ module.exports = function(config) {
         '../scripts/*.js'
     ],
     preprocessors: {
-        '../scripts/*.js': ['browserify', 'coverage'],
+        '../scripts/*.js': ['browserify'],
         'mocha-tests.js': ['browserify']
     },
     browserify: {
         debug: true,
-        transform: ['brfs']
+        configure: function(bundle){
+            bundle.on('prebundle', function(){
+                bundle
+                    .transform('brfs')
+                    .transform(istanbul({
+                        defaultIgnore: true
+                    }));
+            });
+        }
     },
     reporters: ['progress', 'junit', 'coverage'],
     coverageReporter: {
