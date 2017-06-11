@@ -47,7 +47,7 @@ describe('Selenium tests', function () {
             expect(allHaveFanta).toBeTruthy();
         });
         
-        it('should remove an item from the shopping cart', function (done) {            
+        it('should remove an item from the shopping cart', function (done) {
             browser.get('shopping-cart.html');
             // redirect
             browser.wait(EC.presenceOf($('[ng-controller=loginController]'), 2000));

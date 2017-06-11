@@ -1,6 +1,6 @@
 angular.module('shopApp', [])
     .service('utilsService', require('./utils.js'))
-    .service('repositoryService', require('./repository.js'))
+    .service('repositoryService', ['$http', require('./repository.js')])
     .controller('searchController', ['$scope', 'utilsService', 'repositoryService', function ($scope, utils, repository) {
 
         var q = utils.getQueryParams().q;

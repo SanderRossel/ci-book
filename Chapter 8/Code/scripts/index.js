@@ -1,5 +1,5 @@
 angular.module('shopApp', [])
-    .service('repositoryService', require('./repository.js'))
+    .service('repositoryService', ['$http', require('./repository.js')])
     .controller('homeController', ['$scope', 'repositoryService', function ($scope, repository) {
         repository.getTopProducts(function (results) {
             $scope.topProducts = results;

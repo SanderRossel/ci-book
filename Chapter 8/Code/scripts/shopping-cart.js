@@ -1,5 +1,5 @@
 angular.module('shopApp', [])
-    .service('repositoryService', require('./repository.js'))
+    .service('repositoryService', ['$http', require('./repository.js')])
     .controller('shoppingCartController', ['$scope', 'repositoryService', function ($scope, repository) {
         var order = require('./order.js');
         
