@@ -159,7 +159,6 @@ pipeline {
              Check console output at ${env.BUILD_URL}""",
              subject: """STATE CHANGED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'""",
              to: 'sander.rossel@gmail.com'
-      }
     }
   }
 }
