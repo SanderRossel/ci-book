@@ -6,21 +6,6 @@ var express = require('express'),
 
 app.use(bodyParser.json());
 
-app.use(function(req, res, next) {
-    var json = res.json;
-    var toXml = req.query.xml;
-    res.json = function (obj) {
-        if (toXml) {
-            var xml = js2xmlparser.parse('todo', obj);
-            res.setHeader('content-type', 'text/xml');
-            res.end(xml);
-        } else {
-            json.apply(res, arguments);
-        }
-    }
-    next();
-});
-   
 var todos = [{
     id: 1,
     description: 'Write a book.',

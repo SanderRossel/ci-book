@@ -68,16 +68,16 @@ gulp.task('clean', function () {
         .pipe(replace('href="..\\"', 'href="'))
         .pipe(htmlreplace({
             css: [
-                '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-                '../css/all.css'
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                'css/all.css'
             ],
             node_modules: [
-                '../../node_modules/angular/angular.min.js',
-                '../../node_modules/jquery/dist/jquery.min.js',
-                '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
+                'node_modules/angular/angular.min.js',
+                'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/bootstrap/dist/js/bootstrap.min.js'
             ],
             js: {
-                src: '../scripts',
+                src: 'scripts',
                 tpl: '<script src="%s/%f.bundle.js"></script>'
             }
         }))

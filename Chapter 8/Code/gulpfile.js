@@ -71,21 +71,21 @@ gulp.task('clean', function () {
         .pipe(gulp.dest('prod/css'));
 })
 .task('html', ['clean'], function () {
-    return gulp.src(['index.html', 'views/*.html'])
+    return gulp.src(['views/*.ejs'])
         .pipe(replace('href="views\\', 'href="'))
         .pipe(replace('href="..\\"', 'href="'))
         .pipe(htmlreplace({
             css: [
-                '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-                '../css/all.css'
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                'css/all.css'
             ],
             node_modules: [
-                '../../node_modules/angular/angular.min.js',
-                '../../node_modules/jquery/dist/jquery.min.js',
-                '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
+                'node_modules/angular/angular.min.js',
+                'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/bootstrap/dist/js/bootstrap.min.js'
             ],
             js: {
-                src: '../scripts',
+                src: 'scripts',
                 tpl: '<script src="%s/%f.bundle.js"></script>'
             }
         }))
