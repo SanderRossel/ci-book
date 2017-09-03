@@ -23,11 +23,15 @@ app.use(function(req, res, next) {
 
 app.use('/node_modules/bootstrap/dist/fonts', express.static('node_modules/bootstrap/dist/fonts'));
 app.use('/node_modules/bootstrap/dist/css/bootstrap.css', express.static('node_modules/bootstrap/dist/css/bootstrap.css'));
+app.use('/node_modules/bootstrap/dist/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
 app.use('/css', express.static('css'));
 
 app.use('/node_modules/angular/angular.js', express.static('node_modules/angular/angular.js'));
+app.use('/node_modules/angular/angular.min.js', express.static('node_modules/angular/angular.min.js'));
 app.use('/node_modules/jquery/dist/jquery.js', express.static('node_modules/jquery/dist/jquery.js'));
+app.use('/node_modules/jquery/dist/jquery.min.js', express.static('node_modules/jquery/dist/jquery.min.js'));
 app.use('/node_modules/bootstrap/dist/js/bootstrap.js', express.static('node_modules/bootstrap/dist/js/bootstrap.js'));
+app.use('/node_modules/bootstrap/dist/js/bootstrap.min.js', express.static('node_modules/bootstrap/dist/js/bootstrap.min.js'));
 app.use('/scripts', express.static('scripts'));
 app.use('/scripts/bundles', express.static('scripts/bundles'));
 
