@@ -15,8 +15,8 @@ namespace web_shop.Controllers
 
         public IActionResult Logout()
         {
-            HttpContext.Session.SetString("Username", null);
-            HttpContext.Session.SetString("IsAuthenticated", null);
+            HttpContext.Session.Remove("Username");
+            HttpContext.Session.Remove("IsAuthenticated");
             return RedirectToActionPermanent(nameof(Index));
         }
 
