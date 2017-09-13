@@ -3,14 +3,14 @@
    // Use hover for the description of the existing attributes
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
-   "configurations": [       
-       {
+   "configurations": [
+        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "doItAll", //"build",
+            "preLaunchTask": "doItAll",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.1/web-shop.dll",
+            "program": "${workspaceRoot}/bin/Debug/netcoreapp2.0/web-shop.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,

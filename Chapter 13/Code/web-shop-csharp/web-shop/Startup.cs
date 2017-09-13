@@ -44,7 +44,7 @@ namespace web_shop
 
             services.AddSession(options =>
             {
-                options.CookieHttpOnly = true;
+                options.Cookie.HttpOnly = true;
             });
         }
 
