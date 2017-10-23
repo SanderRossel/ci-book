@@ -1,4 +1,6 @@
 module.exports = function(config) {
+  var istanbul = require('browserify-istanbul');
+
   config.set({
     basePath: '',
     frameworks: ['browserify', 'jasmine', 'mocha', 'chai'],
@@ -69,5 +71,5 @@ module.exports = function(config) {
         suite: 'Web Shop',
         useBrowserName: true
     }
-  })
+  });
 };
